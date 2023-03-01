@@ -129,23 +129,31 @@ After successful compilation will show as follow:
 
 After that, we need to migrate our smart contract on local EVM server, Ganache. For that, start the Ganache app which will start an instance of Blockchain on port 7545
 Now open the truffle-config.js from our project folder and check host and port in it:
-
+```info
 host:
 "127.0.0.1", // Localhost (default: none)
 port: 7545,        // Standard Ethereum port (default: none)
 network_id: "*",   // Any network (default: none)
+```
 
 We should make sure to check contract abi folder "artifacts" in the truffle-config.js also.
 contract_build_directory: "./src/artifacts"
 
 In the migrations/ directory, we will also need a file called 1_initial_migration.js which handles the deployment of our ContatctsContract.sol contract and add the following code in that file:
+
+```javascript
+
 const SmartContract = artifacts.require("ContactsContract");
 module.exports = function (deployer) {
 deployer.deploy(SmartContract);
 };
+```
+
+
 After all, start migrate using command:
 truffle migrate
 The successful migration will display as follow:
+```info
 > transaction hash:    0xba0cb4a5c5a3aa2168b2238776300ffeb50906539cbbfb02e6a50c86993bc37d
 > Blocks: 0            Seconds: 0                                
 > contract address:    0x283B8fE536dEE52D3b59224Cde13147a48A2c33b
@@ -166,7 +174,7 @@ The successful migration will display as follow:
 
 Once the above migrate command is successfully executed, the first account on Ganache will have slightly less than 100ETH. I
 t is due to the transaction cost of migrating smart contracts on the blockchain
-
+```
 
 # flutter packages for interaction with smart contract, state management and UI
 http: ^0.13.3
