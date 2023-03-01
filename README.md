@@ -205,7 +205,7 @@ We can check linking codes in contacts_controller.dart as follow:
 # ethereum client
 Since the app interact with smart contract on local ethereum EVM, 
 web3dart will connect a JSON rpc API url of your project, you can check it from Ganache.  
-To make a smart contract call with app, we need private key of smart contract deployed wallet address.
+To make smart contract calls with the app, first we need to get deployed smart contract using abi and private key of smart contract deployed wallet address.
 
 Here is the code in flutter:
 ```dart
