@@ -146,12 +146,6 @@ deployer.deploy(SmartContract);
 After all, start migrate using command:
 truffle migrate
 The successful migration will display as follow:
-
-1_deploy_contracts.js
-=====================
-
-Deploying 'ContactsContract'
-----------------------------
 > transaction hash:    0xba0cb4a5c5a3aa2168b2238776300ffeb50906539cbbfb02e6a50c86993bc37d
 > Blocks: 0            Seconds: 0                                
 > contract address:    0x283B8fE536dEE52D3b59224Cde13147a48A2c33b
@@ -165,11 +159,8 @@ Deploying 'ContactsContract'
 > total cost:          0.01413064 ETH
 
 > Saving artifacts
-   -------------------------------------
 > Total cost:          0.01413064 ETH
 
-Summary
-=======
 > Total deployments:   1
 > Final cost:          0.01413064 ETH
 
